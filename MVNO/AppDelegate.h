@@ -7,11 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@class DDMenuController;
+@class RightSideDrawVC;
 
-@property (strong, nonatomic) UIWindow *window;
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate>{
+    
+    
+}
+
+@property (strong, nonatomic)   UIWindow *window;
+//@property (strong, nonatomic) UIViewController * rightSideDrawerViewController;
+//@property (strong, nonatomic) UIViewController *centerViewController;
+@property (nonatomic,strong)    MainViewController *mainCtrl;
+@property (nonatomic,retain)    DDMenuController *menuCtrl;
+@property (strong, nonatomic)   NSTimer *timer;
 
 
 @end
+
 

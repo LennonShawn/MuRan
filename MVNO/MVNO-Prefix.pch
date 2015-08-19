@@ -1,0 +1,78 @@
+//
+//  MVNO-Prefix.pch
+//  MVNO
+//
+//  Created by beautyx on 15-3-17.
+//  Copyright (c) 2015年 libb. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+//#endif
+
+
+#import "StringConstants.h"
+#import "NumberConstants.h"
+#import "ColorConstants.h"
+#import "Tools.h"
+#import "ComponentsFactory.h"
+#import "MVNOViewController.h"
+#import "ASIHTTPRequest.h"
+#import "ASIFormDataRequest.h"
+#import "MyAlertView.h"
+#import "MVNOUser.h"
+#import "SecurityUtil.h"
+#import "JSON.h"
+
+
+#define RELEASE_SAFELY(__POINTER) {[__POINTER release]; __POINTER = nil;}
+#define IsIOS7 ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=7)
+
+// 宽度比较小的图片背景在试图切换时会出现底色暴露现象
+//#define IMAGR_BLACKGROUND				@"background.png"
+#define IMAGR_BLACKGROUND  @"viewcontrollerground1.png"
+#define UISCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
+#define UISCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
+
+//NSUserDefaults name
+#define login_UD           @"login_UD"
+#define login_USERNAME     @"login_USERNAME"          // 用户名
+#define login_PASSWORD     @"login_PASSWORD"          // 密码
+#define login_SELFTAG     @"login_SELFTAG"          // 自建用户标识
+
+#define login_PROVIDERSIGN @"login_PROVIDERSIGN"      // 运营商标识
+#define login_Auto         @"login_Auto"              //是否自动登录,OFF ON
+#define IsLogined         @"IsLogined"              //是否已经登录
+#define IsArrears         @"IsArrears"              //是否已经欠费
+
+#define IsPwdInit           @"IsPwdInit"            //是否需要改密码
+#define IsMainTel           @"IsMainTel"            //是否是主号码
+
+#define last_LOGINID       @"last_logInID"            //前一次登录id
+#define now_LOGINID        @"now_logInID"             //当前登录id
+#define login_telPhone     @"login_telPhone"
+#define RELOADDATA         @"noteName"
+#define CHANGEIMAGE        @"changeImage"
+#define ARREARS            @"ARREARS"
+#define NOARREARS          @"NOARREARS"
+#define VERSION_LAST       @"version_last"
+#define VERSION_NOW        @"version_now"
+#define PICURLS            @"picurls"
+#define USER_ID_LAST       @"user_id_last"
+#define USER_ID_NOW        @"user_id_now"
+
+#define UPPayPluginPayModeTest  @"01"               //充值 测试模式
+#define UPPayPluginPayMode      @"00"               //充值 正式模式
+
+#define ReloginReqTag       12345
+#define TelTest             @"17090010039"
+
+#endif
